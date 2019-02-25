@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+</style>
+<body bgcolor=#BFFFFF>
+</head>
+<body>
+
+<h2><font face="DFKai-sb">史迪奇精選照    _104316224吳岱燁的網一作業</font></h2>
+<p><font face="DFKai-sb">表格合照片</font></p>
+
+<table style="width:100%">
+  <tr>
+    <th>內容</th>
+    <th>照片</th> 
+    <td>出處</td>
+  </tr>
+  <tr>
+    <td>史迪奇大圖</td>
+    <td><img src="https://imgur.dcard.tw/VxgPSO5.jpg" alt="Trulli" width="500" height="333"></td>
+    <td>https://imgur.dcard.tw/VxgPSO5.jpg</td>
+  </tr>
+    <tr>
+    <td>史迪奇的手機殼</td>
+    <td><img src="https://img.alicdn.com/imgextra/i2/1037520278/TB2b85GyUhnpuFjSZFEXXX0PFXa_!!1037520278.jpg_400x400Q50s50.jpg_.webp" alt="Trulli" width="500" height="333"></td>
+  <td>https://img.alicdn.com/imgextra/i2/1037520278/TB2b85GyUhnpuFjSZFEXXX0PFXa_!!1037520278.jpg_400x400Q50s50.jpg_.webp</td>
+  </tr>
+</table>
+
+</body>
+</html>
