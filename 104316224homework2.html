@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<style>
+table {
+  width:50%;
+}
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 10px;
+  text-align: left;
+}
+table#t01 tr:nth-child(even) {
+  background-color: #eee;
+}
+table#t01 tr:nth-child(odd) {
+ background-color: #fff;
+}
+table#t01 th {
+  background-color: black;
+  color: white;
+}
+</style>
+<body background="http://blog.roodo.com/chiu6688/a9906cd0_s.jpg">
+<form id="orderForm1" action="http://203.64.84.113/x/RQ_RS.aspx" method="post"  name="form1" >
+<h2>捐血者登記表</h2>
+<p>經報奉福利部103年12月1日書函核備</p>
+
+
+<table>
+  <tr>
+    <th>姓名:<br>
+  <input type="text" name="pateintName" value=""></th>
+    <th>性別:
+ <input type="radio" name="gender" value="male" checked> 男
+  <input type="radio" name="gender" value="female"> 女</th> 
+    <th><label for="bookdate">出生年月日：</label>
+<input type="date" id="bookdate" placeholder="2014-09-18"></th>
+  </tr>
+</table>
+<table>
+  <tr>
+    <th>身分證字號:<br>
+  <input type="text" name="ICnumber" value=""></th>
+    <th>在本會是:<br>
+    <input type="radio" name="time" value="first" checked> 首次捐血
+  <input type="radio" name="time" value="bf"> 曾經捐血</th>
+  </tr>
+</table>
+<table>
+  <tr>
+    <th>血型:<br>
+  <input type="text" name="BT" value=""></th>
+    <th>是否曾經懷孕:<br>
+    <input type="radio" name="pregnancy" value="y" checked> 是
+  <input type="radio" name="pregnancy" value="n"> 否</th>
+  </tr>
+</table>
+<table>
+  <tr>
+    <th>身高:<br>
+    <input type="text" name="hight" value="">公分</th>
+    <th>體重:<br>
+    <input type="text" name="we" value="">公斤</th>
+  </tr>
+</table>
+<table>
+  <tr>
+    <th>通訊地址:<br>
+ <textarea name="suggest"></textarea></th>
+  </tr>
+</table>
+<table>
+  <tr>
+    <th>戶籍地址:<br>
+ <textarea name="suggest"></textarea></th>
+  </tr>
+</table>
+<table>
+  <tr>
+    <th>電話:<br>
+ <input type="text" name="phone" value=""></th>
+ <th>寄送方式:
+  <select id= “selectID” name=“send”>
+ <option value=“email” >電子郵件
+ <option value=“home” >郵寄
+ <option value=“no” >不發送
+  </select>
+ </th>
+  </tr>
+</table>
+
+<br>
+<A HREF ="http://intra.blood.org.tw/upload/178da998-59ac-4bd8-9593-4db9963497a1.pdf">出處：捐血登記表(捐血者填寫部分)
+<input type="reset" value="清除">
+<input type="submit" value="確認送出">
+</form> 
+
+</body>
+</html>
