@@ -89,6 +89,14 @@ function check2(){
 alert('你的姓名是'+pateintName+'\n生日是'+bookdate+'\n身分證字號是'+ICnumber+'\n血型是'+BT+'\n身高是'+hight+' / 你的體重是'+we+'\n電話是'+phone);
 }
 
+function ShowAnswer(){
+var patient= {"name":"Chalmers", "telecom":"12345678", "gender": "male", "birthDate": "1974-12-25"};
+    document.getElementById("pateintName").value=patient.name;
+	document.getElementById("phone").value=patient.telecom;
+	document.getElementById("gender").value=patient.gender;
+	document.getElementById("bookdate").value=patient.birthDate;
+}
+
 </script>
 
 　
@@ -103,10 +111,11 @@ alert('你的姓名是'+pateintName+'\n生日是'+bookdate+'\n身分證字號是
 <table bgcolor="white">
   <tr>
     <th>姓名:<br>
-  <input type="text" name="pateintName" value="" id="pateintName"></th>
+
+  	<input type="text" name="pateintName" value="" id="pateintName"></th>
     <th>性別:
- <input type="radio" name="gender" value="male" checked > 男
-  <input type="radio" name="gender" value="female"> 女</th> 
+ <input type="radio" name="gender" value="male" checked id="gender"> 男
+  <input type="radio" name="gender" value="female" id="gender"> 女</th> 
     <th><label for="bookdate">出生年月日：</label>
 <input type="date" id="bookdate" placeholder="2014-09-18"></th>
   </tr>
@@ -166,7 +175,7 @@ alert('你的姓名是'+pateintName+'\n生日是'+bookdate+'\n身分證字號是
 <input type="reset" value="清除">
 <input type="submit" name="button" id="button" value="送出" onClick="check()"/>
 <input type="submit" name="button" id="button" value="送出功能二" onClick="check2()"/>
-
+<input type="button" value="自動填入" onclick="ShowAnswer()">
 
 
 </form> 
