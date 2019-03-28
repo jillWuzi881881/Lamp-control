@@ -65,17 +65,35 @@ table#t01 th {
                 <!-- 若以上條件皆不符合，也就是表單資料皆有填寫的話，則將資料送出 -->
                 else 
 				{
-				alert('你的姓名是'+form1.pateintName.value+'\n生日是'+form1.bookdate.value+'\n身分證字號是'+form1.ICnumber.value+'\n血型是'+form1.BT.value+'\n身高是'+form1.hight.value+
-				' / 你的體重是'+form1.we.value+'\n電話是'+form1.phone.value+'\n地址是'+form1.suggest1.value);
+			
 				document.form1.submit();
 				
 				
 				};
          }
+		 
 </SCRIPT>
 
+<script language="javascript">
+function check2(){
+　var pateintName=document.getElementById("pateintName").value;
+　var bookdate=document.getElementById("bookdate").value;
+  var ICnumber=document.getElementById("ICnumber").value;
+　var BT=document.getElementById("BT").value;
+  var hight=document.getElementById("hight").value;
+　var we=document.getElementById("we").value;
+　var phone=document.getElementById("phone").value;
 
 
+
+alert('你的姓名是'+pateintName+'\n生日是'+bookdate+'\n身分證字號是'+ICnumber+'\n血型是'+BT+'\n身高是'+hight+' / 你的體重是'+we+'\n電話是'+phone);
+}
+
+</script>
+
+　
+　
+				
 <body background="http://blog.roodo.com/chiu6688/a9906cd0_s.jpg">
 <form id="form1" action="http://203.64.84.113/x/RQ_RS.aspx" method="post"  name="form1" onclick="return false">
 <h2>捐血者登記表</h2>
@@ -114,9 +132,9 @@ table#t01 th {
 <table bgcolor="white">
   <tr>
     <th>身高:<br>
-    <input type="text" name="hight" value="">公分</th>
+    <input type="text" name="hight" value="" id="hight">公分</th>
     <th>體重:<br>
-    <input type="text" name="we" value="">公斤</th>
+    <input type="text" name="we" value="" id="we">公斤</th>
   </tr>
 </table>
 <table bgcolor="white" bgcolor="white">
@@ -134,7 +152,7 @@ table#t01 th {
 <table>
   <tr>
     <th bgcolor="white">電話:<br>
- <input type="text" name="phone" value="" ></th>
+ <input type="text" name="phone" value="" id="phone"></th>
  <th bgcolor="white">寄送方式:
   <select id= “selectID” name=“send”>
  <option value=“email” >電子郵件
@@ -147,7 +165,7 @@ table#t01 th {
 
 <input type="reset" value="清除">
 <input type="submit" name="button" id="button" value="送出" onClick="check()"/>
-
+<input type="submit" name="button" id="button" value="送出功能二" onClick="check2()"/>
 
 
 
@@ -155,3 +173,10 @@ table#t01 th {
 
 </body>
 </html>
+var name_element = document.getElementById('pateintName');
+				var name = name_element.value;
+				var bookdate_element = document.getElementById('bookdate');
+				var bookdate = email_element.value;
+				alert('你的姓名是'+pateintName+'\n生日是'+bookdate+'\n身分證字號是'+form1.ICnumber.value+'\n血型是'+form1.BT.value+'\n身高是'+form1.hight.value+
+				' / 你的體重是'+form1.we.value+'\n電話是'+form1.phone.value+'\n地址是'+form1.suggest1.value);
+				document.form1.submit();
