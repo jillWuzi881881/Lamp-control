@@ -92,11 +92,43 @@ var patient= {"name":"Chalmers", "telecom":"12345678", "gender": "male", "birthD
 	document.getElementById("bookdate").value=patient.birthDate;
 }
 </script>
-
-　
+ 
+<script language="javascript">
+function bmicc(){
+var hig=document.getElementById("hight").value
+var wei=document.getElementById("we").value
+var bmic=wei/((hig/100)*(hig/100))
+if(hig<30 || hig>300)
+{
+document.getElementById("demo").innerHTML="身高值錯誤或未在30~300中間";
+}
+else if(wei<2 || wei>400)
+{
+document.getElementById("demo").innerHTML="身高值錯誤或未在2~400中間";
+}
+else
+{
+document.getElementById("demo").innerHTML="BMI值為："+bmic;
+}
+}
+</script>
 　
 				
-<body background="http://blog.roodo.com/chiu6688/a9906cd0_s.jpg">
+<body background="http://i.epochtimes.com/assets/uploads/2013/06/110729153900100445-424x600.jpg" onload="renew()">
+
+<script>
+department=new Array();
+department[0]=["電子郵件", "郵寄", "不發送"];
+
+function renew(){
+	for(var i=0;i<department[0].length;i++)
+		document.form1.send.options[i]=new Option(department[0][i], department[0][i]);	// 設定新選項
+	document.form1.send.length=department[0].length;	// 刪除多餘的選項
+}
+</script>
+
+
+
 <form id="form1" action="http://203.64.84.113/x/RQ_RS.aspx" method="post"  name="form1" onclick="return false">
 <h2>捐血者登記表</h2>
 <p>經報奉福利部103年12月1日書函核備</p>
@@ -123,6 +155,21 @@ var patient= {"name":"Chalmers", "telecom":"12345678", "gender": "male", "birthD
   <input type="radio" name="time" value="bf"> 曾經捐血</th>
   </tr>
 </table>
+
+<table bgcolor="white">
+  <tr>
+    <th>請勾選你的興趣<br>
+<input type="checkbox" value="Travel" name="Interest" > 旅遊<br>
+<input type="checkbox" value="Movie" name="Interest" > 電影<br>
+<input type="checkbox" value="Food" name="Interest" > 美食
+<br>
+	
+ </th>
+  </tr>
+</table>
+
+
+
 <table bgcolor="white" bgcolor="white">
   <tr>
     <th>血型:<br>
@@ -142,6 +189,10 @@ var patient= {"name":"Chalmers", "telecom":"12345678", "gender": "male", "birthD
 </table>
 <table bgcolor="white" bgcolor="white">
   <tr>
+  <th>
+  <input type="submit" name="button" id="button" value="BMI計算" onClick="bmicc()"/>
+    <p id="demo">我的BMI值</p></th>
+
     <th>通訊地址:<br>
  <textarea name="suggest1"></textarea></th>
   </tr>
@@ -157,18 +208,15 @@ var patient= {"name":"Chalmers", "telecom":"12345678", "gender": "male", "birthD
     <th bgcolor="white">電話:<br>
  <input type="text" name="phone" value="" id="phone"></th>
  <th bgcolor="white">寄送方式:
-  <select id= “selectID” name=“send”>
- <option value=“email” >電子郵件
- <option value=“home” >郵寄
- <option value=“no” >不發送
-  </select>
+<select name="send" size=3>
+	<option value="">
  </th>
   </tr>
 </table>
 
 <input type="reset" value="清除">
 <input type="submit" name="button" id="button" value="送出" onClick="check()"/>
-<input type="submit" name="button" id="button" value="送出功能二" onClick="check2()"/>
+<input type="submit" name="button1" id="button1" value="送出功能二" onClick="check2()"/>
 <input type="button" value="自動填入" onclick="ShowAnswer()">
 
 
