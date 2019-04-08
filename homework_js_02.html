@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<style>
+table {
+  width:50%;
+}
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 10px;
+  text-align: left;
+}
+table#t01 tr:nth-child(even) {
+  background-color: #eee;
+}
+table#t01 tr:nth-child(odd) {
+ background-color: #fff;
+}
+table#t01 th {
+  background-color: black;
+  color: white;
+}
+</style>
+
+
+<SCRIPT type="text/javascript">
+        function check()
+        {
+				
+                if(form1.pateintName.value == "") 
+                {
+                        alert("未輸入姓名");
+                }
+				
+				else if(form1.bookdate.value == "") 
+                {
+                        alert("未輸入出生");
+                }
+				else if(form1.ICnumber.value == "") 
+                {
+                        alert("未輸入身分證");
+                }
+				else if(form1.BT.value == "") 
+                {
+                        alert("未輸入血型");
+                }
+				else if(form1.hight.value == "") 
+                {
+                        alert("未輸入身高");
+                }
+				else if(form1.we.value == "") 
+                {
+                        alert("未輸入體重");
+                }
+				else if(isNaN(form1.phone.value))
+				{
+                        alert("電話要是數字");
+                }
+				
+				
+				
+                <!-- 若以上條件皆不符合，也就是表單資料皆有填寫的話，則將資料送出 -->
+                else 
+				{
+			
+				document.form1.submit();
+				
+				
+				};
+         }
+		 
+</SCRIPT>
+
+<script language="javascript">
+function check2(){
+　var pateintName=document.getElementById("pateintName").value;
+　var bookdate=document.getElementById("bookdate").value;
+  var ICnumber=document.getElementById("ICnumber").value;
+　var BT=document.getElementById("BT").value;
+  var hight=document.getElementById("hight").value;
+　var we=document.getElementById("we").value;
+　var phone=document.getElementById("phone").value;
+alert('你的姓名是'+pateintName+'\n生日是'+bookdate+'\n身分證字號是'+ICnumber+'\n血型是'+BT+'\n身高是'+hight+' / 你的體重是'+we+'\n電話是'+phone);
+}
+function ShowAnswer(){
+var patient= {"name":"Chalmers", "telecom":"12345678", "gender": "male", "birthDate": "1974-12-25"};
+    document.getElementById("pateintName").value=patient.name;
+	document.getElementById("phone").value=patient.telecom;
+	document.getElementById("gender").value=patient.gender;
+	document.getElementById("bookdate").value=patient.birthDate;
+}
+</script>
+
+　
+　
+				
+<body background="http://blog.roodo.com/chiu6688/a9906cd0_s.jpg">
+<form id="form1" action="http://203.64.84.113/x/RQ_RS.aspx" method="post"  name="form1" onclick="return false">
+<h2>捐血者登記表</h2>
+<p>經報奉福利部103年12月1日書函核備</p>
+
+
+<table bgcolor="white">
+  <tr>
+    <th>姓名:<br>
+
+  	<input type="text" name="pateintName" value="" id="pateintName"></th>
+    <th>性別:
+ <input type="radio" name="gender" value="male" checked id="gender"> 男
+  <input type="radio" name="gender" value="female" id="gender"> 女</th> 
+    <th><label for="bookdate">出生年月日：</label>
+<input type="date" id="bookdate" placeholder="2014-09-18"></th>
+  </tr>
+</table>
+<table bgcolor="white">
+  <tr>
+    <th>身分證字號:<br>
+  <input type="text" name="ICnumber" value="" id="ICnumber"></th>
+    <th>在本會是:<br>
+    <input type="radio" name="time" value="first" checked> 首次捐血
+  <input type="radio" name="time" value="bf"> 曾經捐血</th>
+  </tr>
+</table>
+<table bgcolor="white" bgcolor="white">
+  <tr>
+    <th>血型:<br>
+  <input type="text" name="BT" value="" id="BT"></th>
+    <th>是否曾經懷孕:<br>
+    <input type="radio" name="pregnancy" value="y" checked> 是
+  <input type="radio" name="pregnancy" value="n"> 否</th>
+  </tr>
+</table>
+<table bgcolor="white">
+  <tr>
+    <th>身高:<br>
+    <input type="text" name="hight" value="" id="hight">公分</th>
+    <th>體重:<br>
+    <input type="text" name="we" value="" id="we">公斤</th>
+  </tr>
+</table>
+<table bgcolor="white" bgcolor="white">
+  <tr>
+    <th>通訊地址:<br>
+ <textarea name="suggest1"></textarea></th>
+  </tr>
+</table>
+<table bgcolor="white">
+  <tr>
+    <th>戶籍地址:<br>
+ <textarea name="suggest2"></textarea></th>
+  </tr>
+</table>
+<table>
+  <tr>
+    <th bgcolor="white">電話:<br>
+ <input type="text" name="phone" value="" id="phone"></th>
+ <th bgcolor="white">寄送方式:
+  <select id= “selectID” name=“send”>
+ <option value=“email” >電子郵件
+ <option value=“home” >郵寄
+ <option value=“no” >不發送
+  </select>
+ </th>
+  </tr>
+</table>
+
+<input type="reset" value="清除">
+<input type="submit" name="button" id="button" value="送出" onClick="check()"/>
+<input type="submit" name="button" id="button" value="送出功能二" onClick="check2()"/>
+<input type="button" value="自動填入" onclick="ShowAnswer()">
+
+
+</form> 
+
+</body>
+</html>
